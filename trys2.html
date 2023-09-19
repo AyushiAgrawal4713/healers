@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Add CSS styles and chart libraries here -->
+    <style>
+        /* CSS for the colorful background */
+        body {
+            background: linear-gradient(to bottom right, #FF6B6B, #6BFF6B);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* CSS for the timeline */
+        .timeline {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .event {
+            margin-bottom: 20px;
+        }
+
+        .event-date {
+            font-weight: bold;
+        }
+
+        /* CSS for disease details table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* CSS for charts (you'll need to include a chart library) */
+        .chart {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: wheat;
+            font-size: 36px;
+            padding: 20px;
+            background-color: #00000045;
+            border-radius: 10px;
+        }
+        .navbar {
+            background: linear-gradient(to right, #FF5733, #FFD700, #00FF00, #33FFFC, #9370DB);
+            display: flex;
+            justify-content: space-around;
+            padding: 5 px 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #43148462;
+        }
+    </style>
+</head>
+<body>
+ <div class="navbar">
+        <a href="trys.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        
+    </div>
+     <h1>Medical-History</h1>
+
+    <div class="timeline">
+        <div class="event">
+            <p class="event-date">Birth</p>
+            <p>Healthy birth.</p>
+        </div>
+        <div class="event">
+            <p class="event-date">Age 5</p>
+            <p>Common cold.</p>
+        </div>
+        <div class="event">
+            <p class="event-date">Age 12</p>
+            <p>Fractured arm.</p>
+        </div>
+        <div class="event">
+            <p class="event-date">Age 18</p>
+            <p>Diagnosed with high cholesterol.</p>
+        </div>
+        <div class="event">
+            <p class="event-date">Age 30</p>
+            <p>Heart disease detected.</p>
+        </div>
+        <div class="event">
+            <p class="event-date">Age 35</p>
+            <p>Genetic disease diagnosis.</p>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>Disease</th>
+            <th>Date Diagnosed</th>
+            <th>Treatment</th>
+        </tr>
+        <tr>
+            <td>High Cholesterol</td>
+            <td>Age 18</td>
+            <td>Medication and diet control</td>
+        </tr>
+        <tr>
+            <td>Heart Disease</td>
+            <td>Age 30</td>
+            <td>Angioplasty and medication</td>
+        </tr>
+        <tr>
+            <td>Genetic Disease</td>
+            <td>Age 35</td>
+            <td>Genetic counseling</td>
+        </tr>
+    </table>
+
+    <div class="chart">
+        <!-- Add a chart here (e.g., ECG chart, sugar level graph) using a charting library like Chart.js or D3.
+         js -->
+         <canvas id="myChart" width="400" height="400"></canvas>
+
+    <script>
+        // Data for the chart
+        var data = {
+            labels: ["Blood", "Sugar", "PH", "Hamoglobin", "Pulse", "Platelets"],
+            datasets: [{
+                label: "Sample Data",
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Configuration for the chart
+        var options = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // Get the canvas element and render the chart
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+    </script>
+    </div>
+
+    <!-- JavaScript can be added here for interactivity if needed -->
+
+</body>
+</html>

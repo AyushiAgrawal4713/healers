@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Inventory</title>
+    <style>
+        /* CSS for the colorful background */
+        body {
+            background: linear-gradient(to bottom right, #FF6B6B, #6BFF6B);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* CSS for the main content container */
+        .container {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* CSS for tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* CSS for headings */
+        h1, h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Inventory</h1>
+
+        <h2>Stretchers</h2>
+        <table>
+            <tr>
+                <th>Total</th>
+                <th>Available</th>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td>30</td>
+            </tr>
+        </table>
+
+        <h2>Room Availability</h2>
+        <table>
+            <tr>
+                <th>Total Rooms</th>
+                <th>Available Rooms</th>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>20</td>
+            </tr>
+        </table>
+
+        <h2>Ambulances</h2>
+        <table>
+            <tr>
+                <th>Total</th>
+                <th>Available</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+        </table>
+
+        <h2>Doctors' Specialties</h2>
+        <table>
+            <tr>
+                <th>Specialty</th>
+                <th>Available Doctors</th>
+            </tr>
+            <tr>
+                <td>Cardiology</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Orthopedics</td>
+                <td>3</td>
+            </tr>
+        </table>
+
+        <h2>OPD Availability</h2>
+        <p>Open on weekdays from 9 AM to 5 PM.</p>
+
+        <h2>Food Services</h2>
+        <p>Provided for in-patients as per dietary requirements.</p>
+
+        <h2>OT Setups</h2>
+        <table>
+            <tr>
+                <th>Specialty</th>
+                <th>Number of OTs</th>
+            </tr>
+            <tr>
+                <td>Surgery</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Gynecology</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
